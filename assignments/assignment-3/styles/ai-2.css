@@ -1,0 +1,659 @@
+/*
+   Enkhbayar Idertsog Portfolio CSS
+   Inspired by CSS Zen Garden
+   Created: March 2025
+*/
+
+/* ===== VARIABLES ===== */
+:root {
+    /* Color Palette from Zen Garden Image */
+    --primary-beige: #e8deb0;
+    --secondary-brown: #9c8059;
+    --accent-brick: #a85a3e;
+    --accent-blue: #6ab4e0;
+    --dark-brown: #5d4a34;
+    --light-cream: #f5f1e6;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+
+    /* Typography */
+    --heading-font: 'Georgia', serif;
+    --body-font: 'Arial', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+
+    /* Border Radius */
+    --border-radius: 4px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+
+    /* Containers */
+    --max-width: 1200px;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-dark);
+    background-color: var(--light-cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-brown);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--spacing-sm);
+}
+
+/* Decorative underline for section headings inspired by Zen Garden's structured elements */
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-brick), var(--accent-blue), transparent);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent-brick);
+    text-decoration: underline;
+}
+
+/* ===== LAYOUT ===== */
+header, main, footer {
+    width: 100%;
+}
+
+section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Zen Garden inspired decorative pattern for section backgrounds */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--primary-beige) 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-beige);
+}
+
+.profile-header h2 {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.profile-header h2::after {
+    display: none;
+}
+
+.nav-bar {
+    padding: var(--spacing-sm) 0;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: var(--spacing-sm);
+}
+
+.nav-bar li a {
+    color: var(--primary-beige);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    font-weight: 500;
+}
+
+.nav-bar li a:hover {
+    background-color: var(--accent-brick);
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* ===== HERO SECTION ===== */
+#bio {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(93, 74, 52, 0.7), rgba(93, 74, 52, 0.3)), url('../images/hometown.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+#bio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(45deg, var(--primary-beige) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--primary-beige) 25%, transparent 25%);
+    background-size: 20px 20px;
+    opacity: 0.4;
+}
+
+#bio h2 {
+    color: var(--primary-beige);
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#bio p {
+    max-width: 700px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+}
+
+#bio img {
+    max-width: 500px;
+    margin: var(--spacing-md) 0;
+    border: 5px solid var(--light-cream);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+    transition: transform var(--transition-medium);
+}
+
+#bio img:hover {
+    transform: rotate(0) scale(1.02);
+}
+
+/* ===== EDUCATION SECTION ===== */
+#education {
+    background-color: var(--light-cream);
+    border-top: 3px solid var(--primary-beige);
+    border-bottom: 3px solid var(--primary-beige);
+}
+
+.school-entry {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-medium);
+}
+
+.school-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.school-info h3 {
+    color: var(--accent-brick);
+    margin-bottom: var(--spacing-xs);
+}
+
+.school-info p {
+    margin-bottom: var(--spacing-xs);
+}
+
+.school-info span {
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+/* ===== COURSES SECTION ===== */
+#courses {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border-bottom: 1px solid var(--primary-beige);
+}
+
+th {
+    background-color: var(--secondary-brown);
+    color: var(--text-light);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(232, 222, 176, 0.2);
+}
+
+tr:hover {
+    background-color: rgba(106, 180, 224, 0.1);
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+#experience {
+    background-color: var(--light-cream);
+}
+
+#experience ul {
+    list-style: none;
+}
+
+#experience h3 {
+    color: var(--accent-brick);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.3rem;
+}
+
+#experience ul ul {
+    margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+#experience ul ul li {
+    position: relative;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+}
+
+#experience ul ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+}
+
+/* ===== PROJECTS SECTION ===== */
+#projects {
+    background-color: white;
+}
+
+#projects article {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    background-color: var(--light-cream);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+#projects article:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#projects h3 {
+    color: var(--accent-blue);
+}
+
+/* ===== EXTRA-CURRICULAR SECTION ===== */
+#extra-curricular {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+#extra-curricular h2 {
+    grid-column: 1 / -1;
+}
+
+#extra-curricular article {
+    padding: var(--spacing-md);
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid var(--accent-brick);
+    transition: transform var(--transition-medium);
+}
+
+#extra-curricular article:hover {
+    transform: translateY(-5px);
+}
+
+#extra-curricular h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* ===== VIDEO AND EMBEDDED CONTENT ===== */
+#video, #github-preview, #map-location {
+    text-align: center;
+    background-color: var(--light-cream);
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: var(--spacing-md) auto;
+}
+
+/* ===== CONTACT SECTION & FORM ===== */
+#contacts {
+    background-color: var(--dark-brown);
+    color: var(--text-light);
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+}
+
+#contacts h2 {
+    color: var(--primary-beige);
+}
+
+#contacts a {
+    color: var(--accent-blue);
+    margin: 0 var(--spacing-xs);
+}
+
+#contacts a:hover {
+    color: var(--primary-beige);
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+}
+
+#contact-form h2 {
+    text-align: center;
+    color: var(--primary-beige);
+}
+
+form {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--light-cream);
+}
+
+input, textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--primary-beige);
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(106, 180, 224, 0.3);
+}
+
+button {
+    background-color: var(--accent-brick);
+    color: var(--text-light);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--transition-fast);
+}
+
+button:hover {
+    background-color: var(--secondary-brown);
+}
+
+/* ===== THEME SWITCHER ===== */
+.theme-switcher {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.theme-button {
+    background-color: var(--primary-beige) !important;
+    border: 1px solid var(--secondary-brown) !important;
+}
+
+.theme-button:hover {
+    background-color: var(--secondary-brown) !important;
+    color: var(--text-light) !important;
+}
+
+.theme-button.active {
+    background-color: var(--accent-blue) !important;
+    border-color: var(--dark-brown) !important;
+}
+
+/* ===== FOOTER ===== */
+footer p:last-child {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #extra-curricular {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #bio {
+        min-height: auto;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+}
+
+/* ===== ANIMATIONS & EFFECTS ===== */
+/* Fade in animation for page elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+section:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+/* Subtle parallax effect for the hero section */
+@media (min-width: 992px) {
+    #bio {
+        background-attachment: fixed;
+    }
+}
+
+/* Zen Garden inspired decorative elements */
+/* Subtle box pattern for light backgrounds */
+.pattern-bg {
+    position: relative;
+}
+
+.pattern-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(45deg, var(--primary-beige) 25%, transparent 25%),
+            linear-gradient(-45deg, var(--primary-beige) 25%, transparent 25%);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Path-like accents inspired by the Zen Garden path illustration */
+.zen-accent {
+    position: relative;
+}
+
+.zen-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image:
+            linear-gradient(45deg, transparent 33.333%, var(--accent-brick) 33.333%, var(--accent-brick) 66.667%, transparent 66.667%),
+            linear-gradient(-45deg, transparent 33.333%, var(--accent-blue) 33.333%, var(--accent-blue) 66.667%, transparent 66.667%);
+    background-size: 20px 20px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    header, .theme-switcher, iframe, #contacts a, button {
+        display: none;
+    }
+
+    section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: none;
+        margin: 0;
+        padding: 1cm 0;
+    }
+
+    h2::after {
+        display: none;
+    }
+}
