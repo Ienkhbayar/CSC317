@@ -1,36 +1,10 @@
-/* Matrix-Inspired Beige Portfolio CSS
-   Created for Enkhbayar Idertsog's Portfolio
-   This stylesheet creates a Matrix-inspired look with a beige color scheme */
-
-
-/* Prompt
-Please create a simple CSS file for my portfolio website inspired by Matrix look and feel. I'm a student learning CSS basics and need styling for the following sections:
-    Navigation bar
-    Header/intro section
-    About me section
-    Education section
-    Projects section
-    Contact form
-    Footer
-I'd like my website to have the colors, style, and mood that remind people of Matrix, minimalist, fun.
-Make sure the layout is responsive for mobile and desktop screens. Please add helpful comments that explain what different parts of the CSS do.
-Some specific things I'd like:
-     A color scheme based on beige color
-     Easy-to-read fonts
-     Some simple hover effects on buttons and links
-     Basic responsive design (works on mobile and desktop)
-     Reasonable spacing between elements
-    See sample index.hmtl below.
-    Thank you!
-
- */
 /* Root variables for consistent colors throughout */
 :root {
-    --primary-color: #f5f5dc; /* Light beige */
-    --secondary-color: #e6e2cf; /* Darker beige */
-    --accent-color: #2e8b57; /* Sea green for better contrast with beige */
-    --text-color: #333333; /* Dark gray for text */
-    --highlight-color: #3cb371; /* Medium sea green for highlights */
+    --primary-color: #f5f5dc;       /* Light beige */
+    --secondary-color: #e6e2cf;     /* Darker beige */
+    --accent-color: #2e8b57;        /* Sea green for better contrast with beige */
+    --text-color: #333333;          /* Dark gray for text */
+    --highlight-color: #3cb371;     /* Medium sea green for highlights */
     --matrix-glow: 0 0 10px rgba(46, 139, 87, 0.7); /* Matrix-like glow effect */
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -184,7 +158,6 @@ section:hover {
     object-fit: contain; /* Maintain aspect ratio */
 }
 
-/* Fix for SFSU logo alignment */
 .school-entry:nth-child(3) img {
     max-width: 250px; /* Limit width for the SFSU logo */
     height: auto; /* Let height adjust proportionally */

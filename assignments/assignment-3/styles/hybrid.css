@@ -1,25 +1,16 @@
-/* hybrid.css - Combined solution CSS for Enkhbayar Idertsog's portfolio website
-   Created for CSC317 Assignment 3
-
-   This file combines elements from:
-   1. styles.css (hand-written): Basic structure and layout
-   2. ai-1.css: Typography and form styling
-   3. ai-2.css (Matrix-inspired): Animation effects, section styling, and responsive design
-*/
-
 /* CSS Variables for consistent theming with Zen Garden colors */
 :root {
-    --primary-color: #9c8059; /* Warm brown for primary accents */
+    --primary-color: #9c8059;   /* Warm brown for primary accents */
     --secondary-color: #5d4a34; /* Dark brown for secondary accents */
-    --accent-color: #a85a3e; /* Muted brick red for strong accents */
-    --light-bg: #f5f1e6; /* Light cream background */
-    --text-color: #333333; /* Dark text color */
+    --accent-color: #a85a3e;    /* Muted brick red for strong accents */
+    --light-bg: #f5f1e6;        /* Light cream background */
+    --text-color: #333333;      /* Dark text color */
     --highlight-color: #6ab4e0; /* Subtle blue for hover effects */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    --border-radius: 5px; /* Smooth rounded corners */
+    --border-radius: 5px;       /* Smooth rounded corners */
     --box-shadow: 0 4px 6px var(--shadow-color); /* Slightly stronger shadow */
     --transition-speed: 0.3s;
-    --matrix-glow: 0 0 10px rgba(168, 90, 62, 0.7); /* Soft brick red glow for hover effects */
+    --matrix-glow: 0 0 10px rgba(168, 90, 62, 0.7);
 }
 
 /* Base styles */
