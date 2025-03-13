@@ -2,14 +2,36 @@
    Created for Enkhbayar Idertsog's Portfolio
    This stylesheet creates a Matrix-inspired look with a beige color scheme */
 
+
+/* Prompt
+Please create a simple CSS file for my portfolio website inspired by Matrix look and feel. I'm a student learning CSS basics and need styling for the following sections:
+    Navigation bar
+    Header/intro section
+    About me section
+    Education section
+    Projects section
+    Contact form
+    Footer
+I'd like my website to have the colors, style, and mood that remind people of Matrix, minimalist, fun.
+Make sure the layout is responsive for mobile and desktop screens. Please add helpful comments that explain what different parts of the CSS do.
+Some specific things I'd like:
+     A color scheme based on beige color
+     Easy-to-read fonts
+     Some simple hover effects on buttons and links
+     Basic responsive design (works on mobile and desktop)
+     Reasonable spacing between elements
+    See sample index.hmtl below.
+    Thank you!
+
+ */
 /* Root variables for consistent colors throughout */
 :root {
     --primary-color: #f5f5dc; /* Light beige */
     --secondary-color: #e6e2cf; /* Darker beige */
-    --accent-color: #556b2f; /* Dark olive green for Matrix feel */
+    --accent-color: #2e8b57; /* Sea green for better contrast with beige */
     --text-color: #333333; /* Dark gray for text */
-    --highlight-color: #8a9a5b; /* Olive green for highlights */
-    --matrix-glow: 0 0 10px rgba(138, 154, 91, 0.7); /* Matrix-like glow effect */
+    --highlight-color: #3cb371; /* Medium sea green for highlights */
+    --matrix-glow: 0 0 10px rgba(46, 139, 87, 0.7); /* Matrix-like glow effect */
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -158,6 +180,19 @@ section:hover {
     margin-right: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
+    max-height: 150px; /* Set consistent height for logos */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Fix for SFSU logo alignment */
+.school-entry:nth-child(3) img {
+    max-width: 250px; /* Limit width for the SFSU logo */
+    height: auto; /* Let height adjust proportionally */
+    align-self: flex-start; /* Align to top */
+}
+
+.school-info {
+    flex: 1; /* Take up remaining space */
 }
 
 .school-info h3 {
@@ -303,13 +338,13 @@ footer a {
 /* Matrix-inspired animations and effects */
 @keyframes matrixGlow {
     0% {
-        text-shadow: 0 0 5px rgba(138, 154, 91, 0.7);
+        text-shadow: 0 0 5px rgba(46, 139, 87, 0.7);
     }
     50% {
-        text-shadow: 0 0 20px rgba(138, 154, 91, 0.9);
+        text-shadow: 0 0 20px rgba(46, 139, 87, 0.9);
     }
     100% {
-        text-shadow: 0 0 5px rgba(138, 154, 91, 0.7);
+        text-shadow: 0 0 5px rgba(46, 139, 87, 0.7);
     }
 }
 
@@ -336,6 +371,11 @@ h1, h2 {
     .school-entry img {
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+
+    /* Fix for SFSU logo on mobile */
+    .school-entry:nth-child(3) img {
+        max-width: 200px;
     }
 
     section {
