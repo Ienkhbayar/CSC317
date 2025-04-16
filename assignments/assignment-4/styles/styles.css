@@ -1,0 +1,268 @@
+/* Global Styles & Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: green;
+    --text-color: #333;
+    --button-hover-color: lightgreen;
+    --spacing-unit: 1rem;
+}
+
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem; /* 32px if base font size is 16px */
+    font-weight: 700; /* Bold */
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh; /* Allows the header to expand */
+    padding: calc(var(--spacing-unit) * 2);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular profile image */
+    border: 3px solid #fff; /* White border */
+    margin-bottom: 10px;
+}
+
+.profile-header h2 {
+    font-size: 20px;
+    margin: 10px 0; /* Spacing for job title */
+}
+
+/* Navigation */
+nav {
+    color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bar {
+    background-color: #2a8dd3;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center; /* Center nav items */
+    gap: var(--spacing-unit); /* Flexibly adjust spacing */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px; /* Softer hover effect */
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Bio Styling */
+#bio {
+    padding: var(--spacing-unit);
+    background-color: #f4f4f4; /* Light background */
+    border-radius: 10px;
+    margin: var(--spacing-unit) 0;
+}
+#bio h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: var(--spacing-unit) 0;
+}
+
+section img {
+    width: auto;
+    height: auto;
+    margin: 0 auto; /* Center images */
+}
+
+img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto; /* Center images */
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Education Section */
+#education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between schools */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.school-entry {
+    display: flex;
+    justify-content: flex-start; /* Align items from left */
+    align-items: center; /* Align text and image vertically */
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.school-entry img {
+    max-width: 150px;
+    min-width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.school-info {
+    flex-grow: 1; /* Text takes available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.school-info h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.school-info p {
+    color: #666;
+}
+
+.school-info span {
+    font-style: italic; /* Graduation date styling */
+    color: #666;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* No double borders */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Experience Section */
+#experience, #projects, #extra-curricular {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Project Section */
+.project-entry {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    flex: 1 1 300px;
+    padding: var(--spacing-unit);
+    border-radius: 8px;
+}
+.project-entry h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.project-entry p {
+    color: #666;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+    background-color: var(--button-hover-color);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+    }
+}

@@ -1,19 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>JavaScript Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Enkhbayar Idertsog">
+    <meta name="keywords" content="portfolio, web development, computer science">
+    <meta name="author" content="Enkhbayar Idertsog">
+
+    <!-- Icon-->
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- Styles, CSS-->
+    <link id="theme-stylesheet" rel="stylesheet" href="styles/styles.css">
+
+
+    <title>Enkhbayar Idertsog - Portfolio | Web Development</title>
+    
+<style>
+    /* Theme Switcher Styling */
+    .theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    z-index: 1000;
+    }
+
+    .theme-switcher h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    }
+
+    .theme-buttons {
+    display: flex;
+    gap: 8px;
+    }
+
+    .theme-button {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    }
+
+    .theme-button:hover {
+    background-color: #e0e0e0;
+    }
+
+    .theme-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #0069d9;
+    }
+    </style>
+
 </head>
 <body>
-<h1>JavaScript Week 0 Practice</h1>
-<button id="greetButton">Click Me!</button>
-<div id="output"></div>
+    <header>
+        <div class="profile-header">
+        <img src="images/profile.png" alt="Enkhbayar Idertsog's profile picture">
+        <h2>Enkhbayar Idertsog</h2>
+        </div>
 
-<script src="scripts/hello.js"></script>
+    <!--Navigations-->
+    <nav class="nav-bar">
+        <ul>
+           <li><a href="#bio">About Me</a></li>
+           <li><a href="#education">Education</a></li>
+            <li><a href="#courses">Courses</a></li>
+           <li><a href="#experience">Experience</a></li>
+           <li><a href="#projects">Projects</a></li>
+            <li><a href="#extra-curricular">Extracurricular</a></li>
+            <li><a href="#video">Videos</a></li>
+           <li><a href="#contacts">Contact me </a></li>
+            <li><a href="#contact-form">Form</a></li>
+        </ul>      
+    </nav>
+    </header>
+    
+    <main>
+        <!--Bio Section -->
+        <section id="bio">
+            <h2>About Me</h2>
+            <p>Hello !!! </p>
+            <p>My name is Enkhbayar Idertsog. Currently, I am a third year Computer Science student at San Francisco State University.</p>
+            <p>I was born and raised in Mongolia.</p>
+            <p>This is the image of Ulaanbaatar City that I grew up. (Found this image from internet.) </p>
+            <img src="images/hometown.jpg" alt="Image of Ulaanbaatar City, Mongolia">
+            </section>
 
-<script>
-  document.getElementById("greetButton").addEventListener("click", function() {
-    document.getElementById("output").textContent = createMessage("JavaScript");
-  });
-</script>
+        <!--Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="school-entry">
+                <img src="images/mongol-aspiration%20logo.jpeg" alt="Mongol Aspiration Logo" style="width:200px;height:150px;">
+                <div class="school-info">
+                    <h3>Mongol Aspiration International School</h3>
+                    <p>Graduated: <span>2020</span></p>
+                </div>
+            </div>
+
+            <div class="school-entry">
+                <img src="images/seattle-central-logo.png" alt="Seattle Central Logo" style="width:130px;height:150px;">
+                <div class="school-info">
+                    <h3>Seattle Central College</h3>
+                    <p>Associate of Computer Science</p>
+                    <p>Graduated: <span>2024</span></p>
+                </div>
+            </div>
+
+            <div class="school-entry">
+                <img src="images/sfsu-logo.png" alt="San Francisco State Logo" style="width:400px;height:200px;">
+                <div class="school-info">
+                    <h3>San Francisco State University</h3>
+                    <p>Bachelor of Science, Computer Science</p>
+                    <p>Expected Graduation: <span>2026</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!--Courses section/table-->
+        <section id="courses">
+            <h2>Relevant Courses</h2>
+            <table>
+                <tr>
+                    <th>School</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <th>SSC</th>
+                    <td>CSC 110 - Intro to Computer Programming</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <th>SSC</th>
+                    <td>CSC 142 - Computer Programming I </td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <th>SSC</th>
+                    <td>CSC 143 - Computer Programming II </td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <th>SFSU</th>
+                    <td>CSC 220 - Data Structures </td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <th>SFSU</th>
+                    <td>CSC 230  - Discrete Math Structures </td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <th>SFSU</th>
+                    <td>CSC 256 - Machine Structures </td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <th>SFSU</th>
+                    <td>CSC 317 - Intro to Web Software Development </td>
+                    <td>2025</td>
+                </tr>
+            </table>
+        </section>
+
+        <!--Experiences Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li><h3>Waiter/Manager, Local Restaurant</h3>
+                    <ul>
+                        <li>Managed daily operations and staff scheduling</li>
+                        <li>Provided excellent customer service and handled large volumes of orders</li>
+                    </ul>
+                </li>
+            <li><h3>Social Media Manager, Local Business</h3>
+                    <ul>
+                        <li>Developed and executed social media strategies to increase online presence</li>
+                        <li>Created content and managed platforms including Instagram and Facebook</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!--Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+                <article>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>This is the website you are currently viewing! It showcases my skills in HTML, CSS, and JavaScript. I designed it to present my personal achievements, projects, and contact details. This project helped me learn about responsive design and web accessibility.</p>
+                </article>
+                <article>
+                    <h3>AI-Powered Task Manager</h3>
+                    <p>A future project aimed at developing a task management application that uses artificial intelligence to prioritize and suggest tasks based on user behavior and preferences.</p>
+                </article>
+                <article>
+                    <h3>E-Commerce Platform</h3>
+                    <p>A future project for building a full-stack e-commerce platform. It will feature user authentication, product listings, shopping cart functionality, and payment gateway integration.</p>
+                </article>
+                <article>
+                    <h3>Mobile App for Restaurant Orders</h3>
+                    <p>A mobile application project designed for restaurant owners. It will allow users to place orders directly from their phones and provide a seamless experience for both customers and staff.</p>
+                </article>
+            <article>
+                <h3>JavaScript Calculator</h3>
+                <img src="images/calculator-preview.jpg" alt="Screenshot of JavaScript Calculator" style="max-width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                <p>This calculator project mimics the iOS layout using vanilla HTML, CSS, and JavaScript. It includes features like input validation, error handling, and secure expression evaluation.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <a href="calculator.html" target="_blank">Open Calculator</a>
+            </article>
+        </section>
+
+        <!--Extracurricular Section -->
+        <section id="extra-curricular">
+            <h2>Extra-Curricular Activities</h2>
+            <article>
+                <h3>Volunteer at Local Animal Shelter</h3>
+                <p>Helped take care of animals and organized community events.</p>
+            </article>
+            <article>
+                <h3>Tech Meetups</h3>
+                <p>Attended local tech meetups and networking events to keep up with industry trends.</p>
+            </article>
+            <article>
+                <h3>Hiking Enthusiast</h3>
+                <p>Enjoy exploring new hiking trails in the area on weekends.</p>
+            </article>
+            <article>
+                <h3>Basketball Enthusiast</h3>
+                <p>Played in Mongolian Basketball League in Bay Area.</p>
+            </article>
+        </section>
+
+        <!-- Embedded contents -->
+        <section id="video">        <!-- Video -->
+            <h2>Videos</h2>
+            <p>Check out this YouTube Video!</p>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JPzREbuXkCM?si=y2A5EuOTzBlyCndZ"
+                    title="YouTube video player" style="border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+        </section>
+
+        <section id="github-preview">         <!-- Github -->
+            <h2>GitHub Project Preview</h2>
+            <br>
+            <iframe src="https://ienkhbayar.github.io/CSC317/" width="600" height="400"></iframe>
+            <br>
+        </section>
+
+        <section id="map-location">         <!-- Map Location -->
+            <h2>Where I'm From</h2>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171219.5838242378!2d106.73706493509631!3d47.89176241573279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96925be2b18aab%3A0xe606927864a1847f!2sUlaanbaatar%2C%20Mongolia!5e0!3m2!1sen!2sus!4v1740105072181!5m2!1sen!2sus"
+                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br>
+        </section>
+    </main>
+    
+    <!--Contact Lists -->
+     <footer id="contacts">
+        <h2>Contact Me</h2>
+         <p>Email: eidertsog@sfsu.edu</p>
+        <p>Phone: 123-456-7890</p>
+         <a href="https://github.com/Ienkhbayar" target="_blank">GitHub</a> |
+         <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">LinkedIn</a>
+         <br>
+         <br>
+         <br>
+         
+    <!--Contact Form -->
+         <section id="contact-form">
+             <h2>Contact Form</h2>
+             <form action="https://formspree.io/f/xqaenqlw" method="POST">
+
+                 <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required>
+
+                 <label for="email">Email:</label>
+                 <input type="email" id="email" name="email" required>
+
+                 <label for="subject">Subject:</label>
+                 <input type="text" id="subject" name="subject" required>
+
+
+                 <label for="message">Message:</label>
+                 <textarea id="message" name="message" rows="4" required></textarea>
+
+                 <button type="submit">Send Message</button>
+             </form>
+         </section>
+
+         <!-- Entity usage -->
+         <p>&copy; 2025 Enkhbayar Idertsog &bull; All rights reserved</p>
+     </footer>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <h3>Theme Switcher</h3>
+        <div class="theme-buttons">
+            <button class="theme-button active" data-theme="styles">Hand-Written</button>
+            <button class="theme-button" data-theme="ai-1">AI-1</button>
+            <button class="theme-button" data-theme="ai-2">AI-2</button>
+            <button class="theme-button" data-theme="hybrid">Hybrid</button>
+        </div>
+    </div>
+
+    <!-- Theme Switcher Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all theme buttons
+            const themeButtons = document.querySelectorAll('.theme-button');
+            // Get the stylesheet link element
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+
+            // Function to set active theme
+            function setActiveTheme(themeName) {
+                // Update stylesheet href
+                themeStylesheet.href = `styles/${themeName}.css`;
+
+                // Update active button state
+                themeButtons.forEach(button => {
+                    if (button.dataset.theme === themeName) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+
+                // Save preference to localStorage
+                localStorage.setItem('preferredTheme', themeName);
+            }
+
+            // Add click event to all theme buttons
+            themeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const themeName = this.dataset.theme;
+                    setActiveTheme(themeName);
+                });
+            });
+
+            // Check if there's a saved theme preference
+            const savedTheme = localStorage.getItem('preferredTheme');
+            if (savedTheme) {
+                setActiveTheme(savedTheme);
+            }
+        });
+    </script>
+
 </body>
 </html>

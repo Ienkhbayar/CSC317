@@ -27,6 +27,15 @@ input.error {
     font-size: 2rem !important;
     color: red !important;
 }
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 button {
     width: 100px;
     height: 100px;
@@ -38,7 +47,6 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
-
 button:hover {
     background-color: hsl(0, 0%, 40%);
 }

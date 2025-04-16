@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="styles/calculator.css" />
 </head>
 <body>
+<a href="index.html" style="color: var(--primary-color); text-decoration: underline; margin: 20px; display: block;">← Back to Portfolio</a>
+
 <div id="calculator">
-    <input id="display" readonly />
+    <label for="display" class="visually-hidden">Calculator Display</label>
+    <input id="display" readonly>
+
     <div id="keys">
         <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
         <button onclick="appendToDisplay('7')">7</button>
