@@ -1,0 +1,113 @@
+#calculator {
+    font-family: "Arial", sans-serif;
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    margin: 50px auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    color: #222;
+    background-color: #f0f0f0;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+input.error {
+    font-size: 2rem !important;
+    color: red !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #222;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+button:active {
+    background-color: #bbb;
+    transform: scale(0.95);
+    box-shadow: 0 0 6px #2196f3;
+}
+
+.operator-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+.operator-btn:hover {
+    background-color: #1e88e5;
+}
+
+.operator-btn:active {
+    background-color: #1976d2;
+}
+
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+
+.theme-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #888;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #eee;
+}
+
+.theme-button.active {
+    background-color: #2196f3;
+    color: white;
+    border-color: #1976d2;
+}
+
